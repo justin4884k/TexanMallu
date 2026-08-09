@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Texan Mallu — Vlogs & Reels from Kerala to Texas</title>
+<meta name="description" content="Texan Mallu — a Malayali living the Lone Star life. New vlogs and reels every week: food, road trips, festivals, and everything in between." />
+
+<!-- Social sharing (drives viewers when links are shared) -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Texan Mallu — Vlogs & Reels from Kerala to Texas" />
+<meta property="og:description" content="A Malayali living the Lone Star life. New vlogs and reels every week." />
+<meta property="og:url" content="https://texanmallu.com" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Texan Mallu — Vlogs & Reels from Kerala to Texas" />
+<meta name="twitter:description" content="A Malayali living the Lone Star life. New vlogs and reels every week." />
+
+<!-- Star favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23FFD97D' d='M16 2l3.6 8.9L29 11.6l-7 6.1 2.2 9.3L16 22.1 7.8 27l2.2-9.3-7-6.1 9.4-.7z'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --bg:#0C1A16;
+    --bg-2:#112A22;
+    --bg-3:#17352B;
+    --cream:#F7ECD9;
+    --muted:#AEC1B4;
+    --saffron:#FFB627;
+    --star:#FFD97D;
+    --green:#18A47C;
+    --chili:#E4572E;
+    --line:rgba(247,236,217,.12);
+    --line-2:rgba(247,236,217,.2);
+    --route:linear-gradient(90deg,var(--green) 0%,var(--saffron) 52%,var(--chili) 100%);
+    --shadow:0 18px 50px -20px rgba(0,0,0,.7);
+    --display:'Bricolage Grotesque',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+    --maxw:1180px;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--cream);
+    font-family:var(--body);line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  body::before{
+    /* soft ambient glow — festive lights at dusk */
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(60% 45% at 82% -5%, rgba(255,182,39,.16), transparent 60%),
+      radial-gradient(55% 40% at 8% 8%, rgba(24,164,124,.14), transparent 60%),
+      radial-gradient(50% 40% at 50% 108%, rgba(228,87,46,.12), transparent 60%);
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--saffron);color:#20130a}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative;z-index:1}
+  .route-line{height:3px;background:var(--route);border-radius:3px;border:0}
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    font-size:.72rem;color:var(--saffron);
+  }
+  .eyebrow .star{width:14px;height:14px;flex:0 0 auto}
+  .star{fill:var(--star)}
+
+  h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.02;margin:0}
+  .section-title{font-size:clamp(1.8rem,4.5vw,3rem);letter-spacing:-.02em}
+  .lead{color:var(--muted);font-size:1.05rem;max-width:52ch}
+
+  /* buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;cursor:pointer;
+    font-family:var(--body);font-weight:700;font-size:.95rem;
+    padding:13px 22px;border-radius:999px;border:1px solid transparent;
+    transition:transform .15s ease,background .2s ease,box-shadow .2s ease,color .2s;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn--primary{background:var(--saffron);color:#20130a}
+  .btn--primary:hover{background:var(--star);box-shadow:0 10px 30px -10px rgba(255,182,39,.6)}
+  .btn--chili{background:var(--chili);color:#fff}
+  .btn--chili:hover{filter:brightness(1.08)}
+  .btn--ghost{border-color:var(--line-2);color:var(--cream);background:transparent}
+  .btn--ghost:hover{border-color:var(--saffron);color:var(--saffron)}
+
+  /* ---------- NAV ---------- */
+  header.nav{position:sticky;top:0;z-index:50;
+    background:rgba(12,26,22,.72);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav__inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);
+    font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+  .brand .star{width:26px;height:26px}
+  .brand small{display:block;font-family:var(--body);font-weight:600;
+    font-size:.6rem;letter-spacing:.22em;color:var(--saffron);text-transform:uppercase;margin-top:-3px}
+  .nav__links{display:flex;align-items:center;gap:6px}
+  .nav__links a{padding:9px 14px;border-radius:8px;font-weight:600;font-size:.95rem;color:var(--muted)}
+  .nav__links a:hover{color:var(--cream);background:rgba(247,236,217,.06)}
+  .nav__toggle{display:none;background:none;border:1px solid var(--line-2);border-radius:9px;
+    padding:9px 11px;cursor:pointer}
+  .nav__toggle span{display:block;width:20px;height:2px;background:var(--cream);margin:4px 0;border-radius:2px}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:64px 0 40px}
+  .hero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+  .hero h1{font-size:clamp(2.5rem,6.4vw,4.6rem);letter-spacing:-.03em;margin:18px 0 20px}
+  .hero h1 .hl{color:var(--saffron)}
+  .hero__cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+
+  /* Spotlight panel */
+  .spot{background:linear-gradient(180deg,var(--bg-2),var(--bg));
+    border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:var(--shadow)}
+  .spot__tabs{display:flex;gap:6px;background:rgba(0,0,0,.25);padding:5px;border-radius:12px;margin-bottom:14px}
+  .spot__tab{flex:1;border:0;cursor:pointer;padding:10px 8px;border-radius:9px;background:transparent;
+    color:var(--muted);font-family:var(--body);font-weight:700;font-size:.82rem;letter-spacing:.04em;
+    text-transform:uppercase;transition:.18s}
+  .spot__tab[aria-selected="true"]{background:var(--saffron);color:#20130a}
+  .spot__stage{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:16/10;background:var(--bg-3)}
+  .spot__meta{padding:14px 6px 6px}
+  .spot__meta h3{font-size:1.25rem;letter-spacing:-.01em}
+  .spot__meta .row{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.85rem;margin-top:6px}
+
+  /* thumb / poster */
+  .poster{position:absolute;inset:0;display:flex;align-items:flex-end;padding:16px;cursor:pointer}
+  .poster__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .poster__grad{position:absolute;inset:0}
+  .poster__scrim{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.72))}
+  .poster__label{position:relative;z-index:2;font-family:var(--display);font-weight:800;
+    font-size:1.15rem;line-height:1.1;text-shadow:0 2px 10px rgba(0,0,0,.6);max-width:80%}
+  .play{position:absolute;z-index:3;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:64px;height:64px;border-radius:50%;background:rgba(12,26,22,.55);
+    border:2px solid var(--star);display:grid;place-items:center;transition:.2s}
+  .poster:hover .play{background:var(--saffron);transform:translate(-50%,-50%) scale(1.06)}
+  .play svg{width:26px;height:26px;margin-left:3px}
+  .play svg path{fill:var(--star)}
+  .poster:hover .play svg path{fill:#20130a}
+
+  .pill{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;
+    padding:4px 10px;border-radius:999px;background:rgba(0,0,0,.35);border:1px solid var(--line-2);
+    letter-spacing:.03em;position:relative;z-index:2}
+  .pill .dot{width:7px;height:7px;border-radius:50%}
+
+  /* ---------- FOLLOW STRIP ---------- */
+  .follow{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:26px}
+  .follow__inner{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .follow a{display:flex;align-items:center;gap:13px;padding:22px 18px;transition:.2s;
+    border-right:1px solid var(--line)}
+  .follow a:last-child{border-right:0}
+  .follow a:hover{background:rgba(247,236,217,.05)}
+  .follow .ico{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto}
+  .follow .ico svg{width:20px;height:20px;fill:#fff}
+  .follow b{display:block;font-family:var(--display);font-size:.98rem}
+  .follow span{display:block;font-size:.78rem;color:var(--muted)}
+
+  /* ---------- SECTION SHELL ---------- */
+  .band{padding:76px 0;position:relative;z-index:1}
+  .band__head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:30px;flex-wrap:wrap}
+
+  /* ---------- VIDEO LIBRARY ---------- */
+  .controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:24px}
+  .search{flex:1;min-width:220px;display:flex;align-items:center;gap:10px;
+    background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:11px 15px}
+  .search input{flex:1;background:none;border:0;color:var(--cream);font-family:var(--body);
+    font-size:.95rem;outline:none}
+  .search input::placeholder{color:var(--muted)}
+  .search svg{width:18px;height:18px;fill:var(--muted);flex:0 0 auto}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{cursor:pointer;border:1px solid var(--line-2);background:transparent;color:var(--muted);
+    font-family:var(--body);font-weight:600;font-size:.85rem;padding:9px 15px;border-radius:999px;transition:.16s}
+  .chip:hover{color:var(--cream);border-color:var(--cream)}
+  .chip[aria-pressed="true"]{background:var(--cream);color:#20130a;border-color:var(--cream)}
+  select.sort{background:var(--bg-2);color:var(--cream);border:1px solid var(--line);
+    border-radius:12px;padding:11px 14px;font-family:var(--body);font-weight:600;font-size:.9rem;cursor:pointer}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    transition:transform .2s ease,border-color .2s ease;cursor:pointer}
+  .card:hover{transform:translateY(-4px);border-color:var(--line-2)}
+  .card__thumb{position:relative;aspect-ratio:16/10;overflow:hidden}
+  .card__body{padding:15px 16px 18px}
+  .card__body h3{font-size:1.06rem;letter-spacing:-.01em;font-weight:700}
+  .card__meta{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:.8rem;margin-top:8px}
+  .card__meta .sep{opacity:.4}
+  .empty{grid-column:1/-1;text-align:center;padding:56px 20px;color:var(--muted);
+    border:1px dashed var(--line-2);border-radius:16px}
+
+  /* ---------- ABOUT ---------- */
+  .about{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
+  .about__photo{aspect-ratio:4/5;border-radius:20px;overflow:hidden;position:relative;
+    border:1px solid var(--line);box-shadow:var(--shadow)}
+  .about__photo .poster__grad{background:linear-gradient(150deg,var(--green),var(--saffron) 60%,var(--chili))}
+  .about__photo .mono{position:absolute;inset:0;display:grid;place-items:center;
+    font-family:var(--display);font-weight:800;font-size:5rem;color:rgba(12,26,22,.35)}
+  .about p{color:var(--muted);font-size:1.06rem;margin:0 0 16px}
+  .about p strong{color:var(--cream)}
+  .facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:22px}
+  .fact b{font-family:var(--display);font-size:1.7rem;color:var(--saffron);display:block}
+  .fact span{font-size:.8rem;color:var(--muted)}
+
+  /* ---------- CONTACT ---------- */
+  .contact{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:.82rem;font-weight:600;color:var(--muted);margin-bottom:7px}
+  .field input,.field textarea{width:100%;background:var(--bg-2);border:1px solid var(--line);
+    border-radius:12px;padding:13px 15px;color:var(--cream);font-family:var(--body);font-size:.96rem;outline:none;transition:.16s}
+  .field input:focus,.field textarea:focus{border-color:var(--saffron)}
+  .field textarea{min-height:130px;resize:vertical}
+  .form-note{font-size:.82rem;color:var(--muted);margin-top:10px}
+  .contact__side .row{display:flex;gap:13px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line)}
+  .contact__side .row:last-child{border-bottom:0}
+  .contact__side .ico{width:40px;height:40px;border-radius:11px;background:var(--bg-3);
+    display:grid;place-items:center;flex:0 0 auto}
+  .contact__side .ico svg{width:19px;height:19px;fill:var(--saffron)}
+  .contact__side b{font-family:var(--display);font-size:1rem}
+  .contact__side p{margin:2px 0 0;color:var(--muted);font-size:.9rem}
+
+  /* ---------- FOOTER ---------- */
+  footer{border-top:1px solid var(--line);padding:44px 0 60px;margin-top:20px;position:relative;z-index:1}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .foot__links{display:flex;gap:18px;flex-wrap:wrap}
+  .foot__links a{color:var(--muted);font-size:.9rem;font-weight:600}
+  .foot__links a:hover{color:var(--saffron)}
+  .foot small{color:var(--muted);font-size:.82rem}
+
+  /* ---------- MODAL ---------- */
+  .modal{position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:24px;
+    background:rgba(6,12,10,.82);backdrop-filter:blur(6px)}
+  .modal[open]{display:grid}
+  .modal__box{width:min(880px,100%);background:var(--bg-2);border:1px solid var(--line-2);
+    border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+  .modal__video{aspect-ratio:16/9;background:#000;position:relative}
+  .modal__video iframe{width:100%;height:100%;border:0}
+  .modal__foot{padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .modal__foot h3{font-size:1.15rem}
+  .modal__close{position:absolute;top:14px;right:14px;z-index:5;width:40px;height:40px;border-radius:50%;
+    background:rgba(0,0,0,.55);border:1px solid var(--line-2);color:#fff;cursor:pointer;font-size:1.2rem;line-height:1}
+
+  :focus-visible{outline:3px solid var(--star);outline-offset:2px;border-radius:6px}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .hero__grid{grid-template-columns:1fr;gap:34px}
+    .about,.contact{grid-template-columns:1fr;gap:32px}
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .follow__inner{grid-template-columns:1fr 1fr}
+    .follow a:nth-child(2){border-right:0}
+    .follow a{border-bottom:1px solid var(--line)}
+    .nav__links{position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;
+      gap:0;background:var(--bg-2);border-bottom:1px solid var(--line);padding:8px;display:none}
+    .nav__links[data-open="true"]{display:flex}
+    .nav__links a{padding:13px}
+    .nav__links .btn{margin:8px;justify-content:center}
+    .nav__toggle{display:block}
+  }
+  @media (max-width:560px){
+    .grid{grid-template-columns:1fr}
+    .band{padding:56px 0}
+    .foot{flex-direction:column;text-align:center}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top" aria-label="Texan Mallu home">
+      <svg class="star" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l3.6 8.9L29 11.6l-7 6.1 2.2 9.3L16 22.1 7.8 27l2.2-9.3-7-6.1 9.4-.7z"/></svg>
+      <span>Texan Mallu<small>Kerala × Texas</small></span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#videos">Videos</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn--primary" href="#subscribe">Subscribe</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+<!-- ===================== HERO ===================== -->
+<section class="hero wrap">
+  <div class="hero__grid">
+    <div>
+      <span class="eyebrow">
+        <svg class="star" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l3.6 8.9L29 11.6l-7 6.1 2.2 9.3L16 22.1 7.8 27l2.2-9.3-7-6.1 9.4-.7z"/></svg>
+        Malayali in the Lone Star State
+      </span>
+      <h1>Vlogs &amp; reels from <span class="hl">Kerala to Texas</span>.</h1>
+      <p class="lead">Backwaters to BBQ. I film the food, the road trips, the festivals, and the everyday chaos of building a mallu life in Texas. New drop every week.</p>
+      <div class="hero__cta">
+        <a class="btn btn--chili" href="#videos">Watch the videos</a>
+        <a class="btn btn--ghost" href="#subscribe">Follow along</a>
+      </div>
+
+      <!-- Follow strip -->
+      <div class="follow" id="subscribe">
+        <div class="follow__inner" id="followStrip"><!-- injected --></div>
+      </div>
+    </div>
+
+    <!-- Spotlight -->
+    <aside class="spot" aria-label="Featured video">
+      <div class="spot__tabs" role="tablist">
+        <button class="spot__tab" role="tab" data-slot="day">Today</button>
+        <button class="spot__tab" role="tab" data-slot="week" aria-selected="true">This Week</button>
+        <button class="spot__tab" role="tab" data-slot="month">This Month</button>
+      </div>
+      <div class="spot__stage" id="spotStage"><!-- injected --></div>
+      <div class="spot__meta" id="spotMeta"><!-- injected --></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ===================== VIDEO LIBRARY ===================== -->
+<section class="band" id="videos">
+  <div class="wrap">
+    <div class="band__head">
+      <div>
+        <span class="eyebrow">
+          <svg class="star" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l3.6 8.9L29 11.6l-7 6.1 2.2 9.3L16 22.1 7.8 27l2.2-9.3-7-6.1 9.4-.7z"/></svg>
+          The full reel
+        </span>
+        <h2 class="section-title">Every video, one place</h2>
+      </div>
+      <p class="lead" id="countLine"></p>
+    </div>
+
+    <div class="controls">
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 10-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1114 9.5 4.5 4.5 0 019.5 14z"/></svg>
+        <input id="search" type="search" placeholder="Search titles, topics…" aria-label="Search videos" />
+      </label>
+      <div class="chips" id="platformChips"></div>
+      <select class="sort" id="sort" aria-label="Sort videos">
+        <option value="new">Newest first</option>
+        <option value="old">Oldest first</option>
+      </select>
+    </div>
+
+    <div class="chips" id="categoryChips" style="margin-bottom:24px"></div>
+
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="band" id="about" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap about">
+    <!-- Swap the div below for <img src="me.jpg" class="about__photo" alt="..."> when you have a photo -->
+    <div class="about__photo">
+      <div class="poster__grad"></div>
+      <div class="mono">★</div>
+    </div>
+    <div>
+      <span class="eyebrow">
+        <svg class="star" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l3.6 8.9L29 11.6l-7 6.1 2.2 9.3L16 22.1 7.8 27l2.2-9.3-7-6.1 9.4-.7z"/></svg>
+        Who's behind the camera
+      </span>
+      <h2 class="section-title" style="margin:14px 0 20px">Hey, I'm the Texan Mallu 👋</h2>
+      <p>Born and raised in <strong>Kerala</strong>, now planted deep in the heart of <strong>Texas</strong>. This channel is my two worlds colliding — appam and brisket, monsoon nostalgia and highway sunsets, Onam sadhya cooked in a Houston kitchen.</p>
+      <p>I make honest, unscripted vlogs and quick reels about food, travel, culture shocks, and the little wins of immigrant life. Pull up a chair.</p>
+      <div class="facts">
+        <div class="fact"><b>Weekly</b><span>New uploads</span></div>
+        <div class="fact"><b>4</b><span>Platforms</span></div>
+        <div class="fact"><b>2</b><span>Homes, one story</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="band" id="contact">
+  <div class="wrap">
+    <div class="band__head">
+      <div>
+        <span class="eyebrow">
+          <svg class="star" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l3.6 8.9L29 11.6l-7 6.1 2.2 9.3L16 22.1 7.8 27l2.2-9.3-7-6.1 9.4-.7z"/></svg>
+          Say hello
+        </span>
+        <h2 class="section-title">Let's collab or just chat</h2>
+      </div>
+    </div>
+
+    <div class="contact">
+      <form id="contactForm" novalidate>
+        <div class="field">
+          <label for="cName">Your name</label>
+          <input id="cName" name="name" type="text" required placeholder="Anjali / Roy / …" />
+        </div>
+        <div class="field">
+          <label for="cEmail">Email</label>
+          <input id="cEmail" name="email" type="email" required placeholder="you@email.com" />
+        </div>
+        <div class="field">
+          <label for="cSubject">What's this about?</label>
+          <input id="cSubject" name="subject" type="text" placeholder="Collab / feedback / hello" />
+        </div>
+        <div class="field">
+          <label for="cMsg">Message</label>
+          <textarea id="cMsg" name="message" required placeholder="Tell me what's on your mind…"></textarea>
+        </div>
+        <button class="btn btn--primary" type="submit">Send message</button>
+        <p class="form-note" id="formNote">This opens your email app with the message ready to send.</p>
+      </form>
+
+      <div class="contact__side">
+        <div class="row">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg></span>
+          <div><b>Email</b><p><a href="mailto:test@test.com">test@test.com</a></p></div>
+        </div>
+        <div class="row">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.6 15.6 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.57 3.6 1 1 0 01-.24 1z"/></svg></span>
+          <div><b>Phone</b><p><a href="tel:+19123977722">912-397-7722</a></p></div>
+        </div>
+        <div class="row">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2zm0-8h-2V7h2z"/></svg></span>
+          <div><b>Brand & collab</b><p>PR, sponsorships, and recipe swaps welcome. Drop a note with "Collab" in the subject.</p></div>
+        </div>
+        <div class="row">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/></svg></span>
+          <div><b>Based in</b><p>Texas, USA — filming across the Lone Star State &amp; back home in Kerala.</p></div>
+        </div>
+        <div class="row" style="border:0;padding-top:20px">
+          <div style="display:flex;gap:10px;flex-wrap:wrap" id="contactSocials"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <hr class="route-line" style="margin-bottom:34px" />
+    <div class="foot">
+      <a class="brand" href="#top">
+        <svg class="star" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l3.6 8.9L29 11.6l-7 6.1 2.2 9.3L16 22.1 7.8 27l2.2-9.3-7-6.1 9.4-.7z"/></svg>
+        <span>Texan Mallu<small>Kerala × Texas</small></span>
+      </a>
+      <nav class="foot__links">
+        <a href="#videos">Videos</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#subscribe">Follow</a>
+      </nav>
+      <small>© <span id="year"></span> Texan Mallu · Made with ♥ in Texas &amp; Kerala</small>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== MODAL ===================== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Video player">
+  <div class="modal__box">
+    <div class="modal__video" id="modalVideo">
+      <button class="modal__close" id="modalClose" aria-label="Close">✕</button>
+    </div>
+    <div class="modal__foot">
+      <h3 id="modalTitle"></h3>
+      <a class="btn btn--ghost" id="modalLink" target="_blank" rel="noopener">Open on platform ↗</a>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   ★  EDIT YOUR CONTENT HERE  ★
+   ------------------------------------------------------------
+   1) CHANNELS: your handles + profile links (used in the follow
+      strips and contact page).
+   2) VIDEOS: add one object per video. Newest anywhere is fine —
+      the site sorts by date automatically.
+
+   Each video field:
+     title      — the video title (required)
+     platform   — 'youtube' | 'instagram' | 'tiktok' | 'facebook'
+     url        — link to the video (required)
+     date       — 'YYYY-MM-DD' (required, used for sorting)
+     category   — any label, e.g. 'Food', 'Vlog', 'Travel'
+     spotlight  — 'day' | 'week' | 'month'  (optional; picks the
+                  hero feature. Leave out for normal videos.)
+     youtubeId  — YouTube ID only (e.g. 'dQw4w9WgXcQ'). Add this
+                  for YouTube videos to get a real thumbnail AND
+                  inline playback. Others open on their platform.
+     thumb      — optional image URL to override the auto poster.
+     blurb      — optional one-liner shown on the spotlight.
+   ============================================================ */
+
+const CONTACT_EMAIL = "test@test.com"; // ← your inbox for the form
+
+const CHANNELS = {
+  youtube:   { label: "YouTube",   handle: "@texanmallu", url: "https://youtube.com/@texanmallu",       sub: "Subscribe" },
+  instagram: { label: "Instagram", handle: "@texanmallu", url: "https://instagram.com/texanmallu",      sub: "Follow" },
+  tiktok:    { label: "TikTok",    handle: "@texanmallu", url: "https://tiktok.com/@texanmallu",        sub: "Follow" },
+  facebook:  { label: "Facebook",  handle: "Texan Mallu", url: "https://facebook.com/texanmallu",       sub: "Like" },
+};
+
+const VIDEOS = [
+  { title: "Making a full Onam Sadhya in my Texas kitchen", platform: "youtube",
+    url: CHANNELS.youtube.url, date: "2026-08-04", category: "Food", spotlight: "week",
+    blurb: "26 dishes, one banana leaf, zero chill." },
+
+  { title: "Trying Texas BBQ for the first time (mallu reacts)", platform: "instagram",
+    url: CHANNELS.instagram.url, date: "2026-08-08", category: "Food", spotlight: "day",
+    blurb: "Brisket vs beef ularthiyathu — who wins?" },
+
+  { title: "Kerala monsoon vs Houston thunderstorm", platform: "tiktok",
+    url: CHANNELS.tiktok.url, date: "2026-07-20", category: "Vlog", spotlight: "month",
+    blurb: "Two kinds of rain, one homesick heart." },
+
+  { title: "Road trip: Houston to Austin in 60 seconds", platform: "instagram",
+    url: CHANNELS.instagram.url, date: "2026-08-01", category: "Travel" },
+  { title: "How I make appam without a fancy pan", platform: "youtube",
+    url: CHANNELS.youtube.url, date: "2026-07-28", category: "Food" },
+  { title: "Grocery run at the Indian store — Texas edition", platform: "facebook",
+    url: CHANNELS.facebook.url, date: "2026-07-25", category: "Vlog" },
+  { title: "Sadhya taste test with my American coworkers", platform: "tiktok",
+    url: CHANNELS.tiktok.url, date: "2026-07-15", category: "Food" },
+  { title: "A day in the life: mallu in the Lone Star State", platform: "youtube",
+    url: CHANNELS.youtube.url, date: "2026-07-10", category: "Vlog" },
+  { title: "Cowboy boots + mundu = the fit", platform: "instagram",
+    url: CHANNELS.instagram.url, date: "2026-07-04", category: "Culture" },
+  { title: "Big Bend National Park — first impressions", platform: "youtube",
+    url: CHANNELS.youtube.url, date: "2026-06-27", category: "Travel" },
+  { title: "Making payasam for the whole office", platform: "facebook",
+    url: CHANNELS.facebook.url, date: "2026-06-20", category: "Food" },
+  { title: "Things that shocked me about living in Texas", platform: "tiktok",
+    url: CHANNELS.tiktok.url, date: "2026-06-12", category: "Culture" },
+];
+
+/* ===================== END OF EDITABLE CONTENT ===================== */
+
+/* ---------- platform theming ---------- */
+const PLAT = {
+  youtube:   { name:"YouTube",   color:"#FF3B30", grad:"linear-gradient(140deg,#7a1512,#E4572E)",
+    icon:'<path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 00-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5a2.5 2.5 0 00-1.8 1.8C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 001.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 001.8-1.8C23 15.2 23 12 23 12zM10 15V9l5 3z"/>' },
+  instagram: { name:"Instagram", color:"#E1306C", grad:"linear-gradient(140deg,#7a3b1e,#E4572E 55%,#c13584)",
+    icon:'<path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.5.2.9.45 1.3.85.4.4.65.8.85 1.3.17.4.37 1 .42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2a3.6 3.6 0 01-.85 1.3c-.4.4-.8.65-1.3.85-.4.17-1 .37-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42a3.6 3.6 0 01-1.3-.85 3.6 3.6 0 01-.85-1.3c-.17-.4-.37-1-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.2-.5.45-.9.85-1.3.4-.4.8-.65 1.3-.85.4-.17 1-.37 2.2-.42C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1018.6 12 6.6 6.6 0 0012 5.4zm0 10.9A4.3 4.3 0 1116.3 12 4.3 4.3 0 0112 16.3zm6.8-11.2a1.55 1.55 0 11-1.55-1.55A1.55 1.55 0 0118.8 5.1z"/>' },
+  tiktok:    { name:"TikTok",    color:"#25F4EE", grad:"linear-gradient(140deg,#0c5e52,#18A47C)",
+    icon:'<path d="M16.5 3c.3 2 1.5 3.6 3.5 3.9v2.6c-1.3 0-2.5-.4-3.5-1v5.9a5.4 5.4 0 11-5.4-5.4c.3 0 .5 0 .8.05v2.7a2.7 2.7 0 102 2.6V3z"/>' },
+  facebook:  { name:"Facebook",  color:"#1877F2", grad:"linear-gradient(140deg,#123a5e,#1877F2)",
+    icon:'<path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.75-1.6 1.5V12h2.7l-.43 2.9h-2.3v7A10 10 0 0022 12z"/>' },
+};
+const svgIcon = (p) => `<svg viewBox="0 0 24 24" aria-hidden="true">${PLAT[p].icon}</svg>`;
+const fmtDate = (d) => new Date(d+"T00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
+
+/* poster: real thumb if available, else a branded gradient card */
+function posterHTML(v, big){
+  const ytThumb = v.youtubeId ? `https://i.ytimg.com/vi/${v.youtubeId}/hqdefault.jpg` : "";
+  const img = v.thumb || ytThumb;
+  const imgTag = img
+    ? `<img class="poster__img" src="${img}" alt="" loading="lazy"
+         onerror="this.style.display='none'">` : "";
+  return `
+    <div class="poster" data-play="1">
+      <div class="poster__grad" style="background:${PLAT[v.platform].grad}"></div>
+      ${imgTag}
+      <div class="poster__scrim"></div>
+      <span class="pill"><span class="dot" style="background:${PLAT[v.platform].color}"></span>${PLAT[v.platform].name}</span>
+      ${big ? `<div class="poster__label">${v.title}</div>` : ""}
+      <span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+    </div>`;
+}
+
+/* ---------- spotlight ---------- */
+let currentSlot = "week";
+function pickSpotlight(slot){
+  return VIDEOS.find(v => v.spotlight === slot)
+      || [...VIDEOS].sort((a,b)=> b.date.localeCompare(a.date))[0];
+}
+function renderSpotlight(){
+  const v = pickSpotlight(currentSlot);
+  document.getElementById("spotStage").innerHTML = posterHTML(v, true);
+  document.getElementById("spotStage").querySelector(".poster").onclick = () => openVideo(v);
+  document.getElementById("spotMeta").innerHTML = `
+    <h3>${v.title}</h3>
+    <div class="row">
+      <span>${PLAT[v.platform].name}</span><span style="opacity:.4">•</span>
+      <span>${fmtDate(v.date)}</span>${v.category?`<span style="opacity:.4">•</span><span>${v.category}</span>`:""}
+    </div>
+    ${v.blurb?`<p style="color:var(--muted);margin:8px 0 0;font-size:.92rem">${v.blurb}</p>`:""}`;
+}
+document.querySelectorAll(".spot__tab").forEach(t=>{
+  t.addEventListener("click",()=>{
+    document.querySelectorAll(".spot__tab").forEach(x=>x.setAttribute("aria-selected","false"));
+    t.setAttribute("aria-selected","true");
+    currentSlot = t.dataset.slot;
+    renderSpotlight();
+  });
+});
+
+/* ---------- follow strips ---------- */
+function renderFollow(){
+  const strip = Object.keys(CHANNELS).map(p=>{
+    const c = CHANNELS[p];
+    return `<a href="${c.url}" target="_blank" rel="noopener">
+      <span class="ico" style="background:${PLAT[p].grad}">${svgIcon(p)}</span>
+      <span><b>${c.sub} on ${PLAT[p].name}</b><span>${c.handle}</span></span>
+    </a>`;
+  }).join("");
+  document.getElementById("followStrip").innerHTML = strip;
+
+  document.getElementById("contactSocials").innerHTML = Object.keys(CHANNELS).map(p=>
+    `<a class="btn btn--ghost" style="padding:10px 16px" href="${CHANNELS[p].url}" target="_blank" rel="noopener">${PLAT[p].name}</a>`
+  ).join("");
+}
+
+/* ---------- library ---------- */
+let activePlatform = "all", activeCategory = "all";
+function renderChips(){
+  const plats = ["all", ...new Set(VIDEOS.map(v=>v.platform))];
+  document.getElementById("platformChips").innerHTML = plats.map(p=>
+    `<button class="chip" data-plat="${p}" aria-pressed="${p==='all'}">${p==='all'?'All platforms':PLAT[p].name}</button>`).join("");
+  const cats = ["all", ...new Set(VIDEOS.map(v=>v.category).filter(Boolean))];
+  document.getElementById("categoryChips").innerHTML = cats.map(c=>
+    `<button class="chip" data-cat="${c}" aria-pressed="${c==='all'}">${c==='all'?'All topics':c}</button>`).join("");
+
+  document.querySelectorAll("[data-plat]").forEach(b=>b.onclick=()=>{
+    activePlatform=b.dataset.plat;
+    document.querySelectorAll("[data-plat]").forEach(x=>x.setAttribute("aria-pressed", x===b));
+    renderGrid();
+  });
+  document.querySelectorAll("[data-cat]").forEach(b=>b.onclick=()=>{
+    activeCategory=b.dataset.cat;
+    document.querySelectorAll("[data-cat]").forEach(x=>x.setAttribute("aria-pressed", x===b));
+    renderGrid();
+  });
+}
+function renderGrid(){
+  const q = document.getElementById("search").value.trim().toLowerCase();
+  const order = document.getElementById("sort").value;
+  let list = VIDEOS.filter(v=>
+    (activePlatform==="all"||v.platform===activePlatform) &&
+    (activeCategory==="all"||v.category===activeCategory) &&
+    (!q || (v.title+" "+(v.category||"")).toLowerCase().includes(q))
+  ).sort((a,b)=> order==="new" ? b.date.localeCompare(a.date) : a.date.localeCompare(b.date));
+
+  document.getElementById("countLine").textContent =
+    `${VIDEOS.length} videos across ${new Set(VIDEOS.map(v=>v.platform)).size} platforms — updated weekly.`;
+
+  const grid = document.getElementById("grid");
+  if(!list.length){ grid.innerHTML = `<div class="empty">No videos match that yet. Try clearing filters or searching something else.</div>`; return; }
+  grid.innerHTML = list.map((v,i)=>`
+    <article class="card" data-i="${VIDEOS.indexOf(v)}">
+      <div class="card__thumb">${posterHTML(v,false)}</div>
+      <div class="card__body">
+        <h3>${v.title}</h3>
+        <div class="card__meta">
+          <span>${PLAT[v.platform].name}</span><span class="sep">•</span>
+          <span>${fmtDate(v.date)}</span>${v.category?`<span class="sep">•</span><span>${v.category}</span>`:""}
+        </div>
+      </div>
+    </article>`).join("");
+  grid.querySelectorAll(".card").forEach(card=>{
+    card.onclick=()=>openVideo(VIDEOS[+card.dataset.i]);
+  });
+}
+["search","sort"].forEach(id=>document.getElementById(id).addEventListener("input",renderGrid));
+
+/* ---------- modal ---------- */
+const modal = document.getElementById("modal");
+const modalVideo = document.getElementById("modalVideo");
+function openVideo(v){
+  document.getElementById("modalTitle").textContent = v.title;
+  const link = document.getElementById("modalLink");
+  link.href = v.url; link.textContent = `Watch on ${PLAT[v.platform].name} ↗`;
+  // keep the close button, replace any previous iframe/poster
+  modalVideo.querySelectorAll("iframe,.modal__poster").forEach(n=>n.remove());
+  if(v.platform==="youtube" && v.youtubeId){
+    const f = document.createElement("iframe");
+    f.src = `https://www.youtube.com/embed/${v.youtubeId}?autoplay=1&rel=0`;
+    f.allow = "autoplay; encrypted-media; picture-in-picture";
+    f.allowFullscreen = true;
+    modalVideo.appendChild(f);
+  } else {
+    // Reels/TikTok/FB (and YT without an ID) open on their platform
+    const poster = document.createElement("a");
+    poster.className = "modal__poster";
+    poster.href = v.url; poster.target = "_blank"; poster.rel = "noopener";
+    poster.style.cssText = "position:absolute;inset:0;display:block";
+    poster.innerHTML = posterHTML(v,true);
+    modalVideo.appendChild(poster);
+  }
+  modal.setAttribute("open","");
+  document.body.style.overflow="hidden";
+}
+function closeModal(){
+  modal.removeAttribute("open");
+  modalVideo.querySelectorAll("iframe,.modal__poster").forEach(n=>n.remove());
+  document.body.style.overflow="";
+}
+document.getElementById("modalClose").onclick=closeModal;
+modal.addEventListener("click",e=>{ if(e.target===modal) closeModal(); });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeModal(); });
+
+/* ---------- contact form (opens email app, no backend needed) ---------- */
+/* Upgrade path: to collect submissions without opening an email client,
+   sign up at formspree.io, then replace the handler below with a fetch
+   POST to your Formspree endpoint. */
+document.getElementById("contactForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const f = e.target;
+  if(!f.name.value.trim() || !f.email.value.trim() || !f.message.value.trim()){
+    document.getElementById("formNote").textContent = "Please fill in your name, email, and message.";
+    return;
+  }
+  const subject = encodeURIComponent(f.subject.value || `Hello from ${f.name.value}`);
+  const body = encodeURIComponent(`${f.message.value}\n\n— ${f.name.value}\n${f.email.value}`);
+  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+  document.getElementById("formNote").textContent = "Opening your email app… if nothing happens, email " + CONTACT_EMAIL + " directly.";
+});
+
+/* ---------- nav toggle ---------- */
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
+navToggle.onclick=()=>{
+  const open = navLinks.getAttribute("data-open")==="true";
+  navLinks.setAttribute("data-open", String(!open));
+  navToggle.setAttribute("aria-expanded", String(!open));
+};
+navLinks.querySelectorAll("a").forEach(a=>a.onclick=()=>{
+  navLinks.setAttribute("data-open","false");
+  navToggle.setAttribute("aria-expanded","false");
+});
+
+/* ---------- init ---------- */
+document.getElementById("year").textContent = new Date().getFullYear();
+renderFollow();
+renderChips();
+renderGrid();
+renderSpotlight();
+</script>
+</body>
+</html>
