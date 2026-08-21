@@ -64,6 +64,19 @@
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative;z-index:1}
   .route-line{height:3px;background:var(--route);border-radius:3px;border:0}
 
+  /* Route dividers — the star (Texas) and diya (Kerala) bookend a gradient
+     that runs green -> saffron -> chili: Kerala fading into Texas, every
+     time it appears between sections. */
+  .route-divider{
+    display:flex;align-items:center;gap:18px;
+    max-width:var(--maxw);margin:0 auto;padding:6px 24px 6px;
+    position:relative;z-index:1;
+  }
+  .route-divider .route-line{flex:1}
+  .route-divider .icon{width:22px;height:22px;flex:0 0 auto}
+  .route-divider .icon--star{fill:var(--star)}
+  .route-divider .icon--diya{fill:var(--chili)}
+
   .eyebrow{
     display:inline-flex;align-items:center;gap:9px;
     font-weight:700;letter-spacing:.16em;text-transform:uppercase;
@@ -265,6 +278,7 @@
     .grid{grid-template-columns:1fr}
     .band{padding:56px 0}
     .foot{flex-direction:column;text-align:center}
+    .route-divider{gap:12px}
   }
   @media (prefers-reduced-motion:reduce){
     *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
@@ -327,6 +341,15 @@
   </div>
 </section>
 
+<div class="route-divider" aria-hidden="true">
+  <svg class="icon icon--star" viewBox="0 0 32 32"><path d="M16 2l3.6 8.9L29 11.6l-7 6.1 2.2 9.3L16 22.1 7.8 27l2.2-9.3-7-6.1 9.4-.7z"/></svg>
+  <div class="route-line"></div>
+  <svg class="icon icon--diya" viewBox="0 0 24 24">
+    <path d="M12 3c-1.8 2.6-3.4 4.6-3.4 6.8a3.4 3.4 0 006.8 0C15.4 7.6 13.8 5.6 12 3z"/>
+    <path d="M4.2 15.4c2 1.7 4.8 2.7 7.8 2.7s5.8-1 7.8-2.7l-1.1-2c-1.8 1.3-4.2 2.1-6.7 2.1s-4.9-.8-6.7-2.1l-1.1 2z"/>
+  </svg>
+</div>
+
 <!-- ===================== VIDEO LIBRARY ===================== -->
 <section class="band" id="videos">
   <div class="wrap">
@@ -359,6 +382,15 @@
   </div>
 </section>
 
+<div class="route-divider" aria-hidden="true">
+  <svg class="icon icon--diya" viewBox="0 0 24 24">
+    <path d="M12 3c-1.8 2.6-3.4 4.6-3.4 6.8a3.4 3.4 0 006.8 0C15.4 7.6 13.8 5.6 12 3z"/>
+    <path d="M4.2 15.4c2 1.7 4.8 2.7 7.8 2.7s5.8-1 7.8-2.7l-1.1-2c-1.8 1.3-4.2 2.1-6.7 2.1s-4.9-.8-6.7-2.1l-1.1 2z"/>
+  </svg>
+  <div class="route-line"></div>
+  <svg class="icon icon--star" viewBox="0 0 32 32"><path d="M16 2l3.6 8.9L29 11.6l-7 6.1 2.2 9.3L16 22.1 7.8 27l2.2-9.3-7-6.1 9.4-.7z"/></svg>
+</div>
+
 <!-- ===================== ABOUT ===================== -->
 <section class="band" id="about" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap about">
@@ -383,6 +415,15 @@
     </div>
   </div>
 </section>
+
+<div class="route-divider" aria-hidden="true">
+  <svg class="icon icon--star" viewBox="0 0 32 32"><path d="M16 2l3.6 8.9L29 11.6l-7 6.1 2.2 9.3L16 22.1 7.8 27l2.2-9.3-7-6.1 9.4-.7z"/></svg>
+  <div class="route-line"></div>
+  <svg class="icon icon--diya" viewBox="0 0 24 24">
+    <path d="M12 3c-1.8 2.6-3.4 4.6-3.4 6.8a3.4 3.4 0 006.8 0C15.4 7.6 13.8 5.6 12 3z"/>
+    <path d="M4.2 15.4c2 1.7 4.8 2.7 7.8 2.7s5.8-1 7.8-2.7l-1.1-2c-1.8 1.3-4.2 2.1-6.7 2.1s-4.9-.8-6.7-2.1l-1.1 2z"/>
+  </svg>
+</div>
 
 <!-- ===================== CONTACT ===================== -->
 <section class="band" id="contact">
@@ -420,13 +461,23 @@
       </form>
 
       <div class="contact__side">
-        <div class="row">
-          <span class="ico"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg></span>
-          <div><b>Email</b><p><a href="mailto:test@test.com">test@test.com</a></p></div>
+        <!-- Quick actions: matches the "reach me by email or WhatsApp" ask directly -->
+        <div class="row" style="border:0;padding-top:0;padding-bottom:22px">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;width:100%">
+            <a class="btn btn--primary" id="whatsappCta" href="#" target="_blank" rel="noopener" style="background:var(--green);color:#fff">
+              <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff" aria-hidden="true"><path d="M17 14.3c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C9.4 9 8.9 7.8 8.7 7.3c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.1-1.3l-.4-.4zM12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.9 15.9A8.4 8.4 0 0112 20.4a8.4 8.4 0 01-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.4 8.4 0 1120.4 12a8.3 8.3 0 01-2.5 5.9z"/></svg>
+              Chat on WhatsApp
+            </a>
+            <a class="btn btn--ghost" data-email-link="cta" href="mailto:test@test.com">Send an email</a>
+          </div>
         </div>
         <div class="row">
-          <span class="ico"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.6 15.6 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.57 3.6 1 1 0 01-.24 1z"/></svg></span>
-          <div><b>Phone</b><p><a href="tel:+19123977722">912-397-7722</a></p></div>
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg></span>
+          <div><b>Email</b><p><a data-email-link="text" href="mailto:test@test.com">test@test.com</a></p></div>
+        </div>
+        <div class="row">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M17 14.3c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C9.4 9 8.9 7.8 8.7 7.3c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.1-1.3l-.4-.4zM12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.9 15.9A8.4 8.4 0 0112 20.4a8.4 8.4 0 01-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.4 8.4 0 1120.4 12a8.3 8.3 0 01-2.5 5.9z"/></svg></span>
+          <div><b>WhatsApp</b><p><a id="whatsappLink" href="#">Message on WhatsApp</a></p></div>
         </div>
         <div class="row">
           <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2zm0-8h-2V7h2z"/></svg></span>
@@ -482,9 +533,9 @@
 /* ============================================================
    ★  EDIT YOUR CONTENT HERE  ★
    ------------------------------------------------------------
-   1) CHANNELS: your handles + profile links (used in the follow
-      strips and contact page).
-   2) VIDEOS: add one object per video. Newest anywhere is fine —
+   1) CONTACT: your inbox + WhatsApp number.
+   2) CHANNELS: your handles + profile links.
+   3) VIDEOS: add one object per video. Newest anywhere is fine —
       the site sorts by date automatically.
 
    Each video field:
@@ -502,13 +553,15 @@
      blurb      — optional one-liner shown on the spotlight.
    ============================================================ */
 
-const CONTACT_EMAIL = "test@test.com"; // ← your inbox for the form
+const CONTACT_EMAIL = "test@test.com";        // ← REPLACE ME: your real inbox
+const WHATSAPP_NUMBER = "19123977722";        // ← REPLACE ME: digits only, country code, no + or spaces
 
 const CHANNELS = {
-  youtube:   { label: "YouTube",   handle: "@texanmallu", url: "https://youtube.com/@texanmallu",       sub: "Subscribe" },
-  instagram: { label: "Instagram", handle: "@texanmallu", url: "https://instagram.com/texanmallu",      sub: "Follow" },
-  tiktok:    { label: "TikTok",    handle: "@texanmallu", url: "https://tiktok.com/@texanmallu",        sub: "Follow" },
-  facebook:  { label: "Facebook",  handle: "Texan Mallu", url: "https://facebook.com/texanmallu",       sub: "Like" },
+  youtube:   { label: "YouTube",   handle: "@texanmallu", url: "https://youtube.com/@texanmallu",  sub: "Subscribe" }, // ← REPLACE ME
+  instagram: { label: "Instagram", handle: "@texanmallu", url: "https://instagram.com/texanmallu",  sub: "Follow" },    // ← REPLACE ME
+  tiktok:    { label: "TikTok",    handle: "@texanmallu", url: "https://tiktok.com/@texanmallu",    sub: "Follow" },    // ← REPLACE ME
+  facebook:  { label: "Facebook",  handle: "Texan Mallu",
+               url: "https://www.facebook.com/profile.php?id=61570638684194", sub: "Like" },                            // ✓ your real page
 };
 
 const VIDEOS = [
@@ -619,6 +672,25 @@ function renderFollow(){
   document.getElementById("contactSocials").innerHTML = Object.keys(CHANNELS).map(p=>
     `<a class="btn btn--ghost" style="padding:10px 16px" href="${CHANNELS[p].url}" target="_blank" rel="noopener">${PLAT[p].name}</a>`
   ).join("");
+}
+
+/* ---------- contact links (single source of truth) ---------- */
+function wireContactLinks(){
+  const waUrl = `https://wa.me/${WHATSAPP_NUMBER}`;
+  const digits = WHATSAPP_NUMBER.replace(/\D/g, "");
+  const waFormatted = digits.length === 11
+    ? `+${digits[0]} (${digits.slice(1,4)}) ${digits.slice(4,7)}-${digits.slice(7)}`
+    : `+${digits}`;
+
+  const waCta = document.getElementById("whatsappCta");
+  const waLink = document.getElementById("whatsappLink");
+  if (waCta) waCta.href = waUrl;
+  if (waLink) { waLink.href = waUrl; waLink.textContent = waFormatted; }
+
+  document.querySelectorAll('[data-email-link]').forEach(el => {
+    el.href = `mailto:${CONTACT_EMAIL}`;
+    if (el.dataset.emailLink === "text") el.textContent = CONTACT_EMAIL;
+  });
 }
 
 /* ---------- library ---------- */
@@ -742,6 +814,7 @@ navLinks.querySelectorAll("a").forEach(a=>a.onclick=()=>{
 /* ---------- init ---------- */
 document.getElementById("year").textContent = new Date().getFullYear();
 renderFollow();
+wireContactLinks();
 renderChips();
 renderGrid();
 renderSpotlight();
